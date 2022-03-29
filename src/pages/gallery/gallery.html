@@ -1,0 +1,72 @@
+<!-- SEO -->
+{% block seo %}
+<!-- Blog, Kakao -->
+<meta property="og:title" content="콘텐츠 제목"> 
+<meta property="og:url" content="웹페이지 URL"> 
+<meta property="og:type" content="웹페이지 타입(blog, website 등)">
+<meta property="og:image" content="표시되는 이미지">
+<meta property="og:site_name" content="웹사이트 이름(URL과 다름)">
+<meta property="og:description" content="웹페이지 설명(제목 아래에 표시)">
+<!-- Twitter -->
+<meta name="twitter:card" content="트위터 카드 타입(요약정보, 사진, 비디오)">
+<meta name="twitter:title" content="콘텐츠 제목">
+<meta name="twitter:description" content="웹페이지 설명">
+<meta name="twitter:image" content="표시되는 이미지">
+{% endblock %}
+
+<!-- head link, js -->
+{% set title = "Gallery" %} 
+{% set style = "pages/gallery.css" %}
+
+<!-- html template -->
+{% extends "base.html" %} 
+
+{% block content %}
+<main class="content">
+  <div class="page-width">
+    <h1>Page 2</h1>
+
+    <div class="list-wrap">
+      <ul class="list-3col">
+        <li>
+          <b>1</b>
+          <img src="/images/dog1.jpg" alt="">
+        </li>
+        <li>
+          <b>2</b>
+          <img src="/images/dog2.jpg" alt="">
+        </li>
+        <li>
+          <b>3</b>
+          <img src="/images/dog3.jpg" alt="">
+        </li>
+        <li>
+          <b>4</b>
+          <img src="/images/dog4.jpg" alt="">
+        </li>
+        <li>
+          <b>5</b>
+          <img src="/images/dog5.jpg" alt="">
+        </li>
+        <li>
+          <b>6</b>
+          <img src="/images/dog6.jpg" alt="">
+        </li>
+        <li>
+          <b>7</b>
+          <img src="/images/dog7.jpg" alt="">
+        </li>
+        <li>
+          <b>8</b>
+          <img src="/images/dog8.jpg" alt="">
+        </li>
+        <li>
+          <b>9</b>
+          <img src="/images/dog9.jpg" alt="">
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</main>
+{% endblock %}

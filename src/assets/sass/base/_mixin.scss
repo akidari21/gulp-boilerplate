@@ -1,0 +1,103 @@
+
+// @param {String} $breakpoint - Breakpoint name
+// @require $breakpoints
+@mixin bp($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+      + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+// Font import
+@mixin font-face($name, $file, $weight: noraml, $style: normal) { 
+  @font-face { 
+    font-family: "#{$name}"; 
+    src: 
+      url('#{$font-path}/#{$file}.woff') format('woff'), 
+      url('#{$font-path}/#{$file}.woff2') format('woff2'), 
+      url('#{$font-path}/#{$file}.otf') format('opentype'); 
+      font-weight: $weight; 
+      font-style: $style; 
+  } 
+}
+
+
+// Aspect ratio (If support IE)
+@mixin aspect-ratio($w: 16, $h: 9, $gap: 0) {
+  position: relative;
+  > * {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+  }
+  &::before {
+    position: relative;
+    content: '';
+    display: block;
+    padding-top: calc(#{$h} / #{$w} * 100%);
+  }
+}
+
+// Text truncate
+// $lines : 행 수
+// Usage : 
+// 1 line - @include ellipsis;
+// 3 line - @include ellipsis(3);
+@mixin ellipsis($lines: 1) {
+  @if $lines > 1  {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */ 
+    overflow: hidden;
+  } @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+  }
+}
+
+// Arrow
+@mixin arrow($direction, $size, $color) {
+  content: "";
+  width: 0;
+  height: 0;
+  $directions: ('down', 'left', 'up', 'right');
+  $positions: ('top', 'right', 'bottom', 'left');
+  @each $position in $positions {
+    $index: index($positions, $position);
+    @if nth($directions, $index) == $direction {
+      border-#{$position}: $size solid $color;
+    } @else {
+      border-#{$position}: $size solid transparent;
+    }
+  }
+}
+
+// Usage
+// @extend %clearfix;
+// clearfix
+%clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// ul, ol, dl list reset
+%listreset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

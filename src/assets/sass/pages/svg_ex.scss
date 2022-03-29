@@ -1,0 +1,57 @@
+@import "../base/variables";
+@import "../base/mixin";
+
+
+.icons-container {
+  // min-height: 100vh;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+}
+.icon-container {
+  display: inline-flex;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid;
+  margin: 0 3px;
+  border-radius: 50%;
+  transition: background-color 150ms;
+  
+  &--facebook {
+    border-color: #3b5998;
+    &:hover {
+      background-color: #3b5998;
+    }
+  }
+  &--twitter {
+    border-color: #1da1f2;
+    &:hover {
+      background-color: #1da1f2;
+    }
+  }
+  &--linkedin {
+    border-color: #0077b5;
+    &:hover {
+      background-color: #0077b5;
+    }
+  }
+  &:hover .icon {
+    max-width: 22px;
+    fill: white;
+  }
+}
+
+.icon {
+  max-width: 18px;
+  transition: max-width 300ms, fill 150ms;
+  &--facebook {
+    fill: #3b5998;
+  }
+  &--twitter {
+    fill: #1da1f2;
+  }
+  &--linkedin {
+    fill: #0077b5;
+  }
+}

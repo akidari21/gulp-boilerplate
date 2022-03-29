@@ -1,0 +1,67 @@
+@import "../base/variables";
+@import "../base/mixin";
+
+/*------------------*
+# Depth-1 Content
+*------------------*/
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-wrap {
+  margin: 0 auto;
+
+  .list-3col {
+    columns: 3;
+    column-gap: 30px;
+    @include bp(md) {
+      columns: 2;
+    }
+    @include bp(sm) {
+      columns: 1;
+    }
+    li {
+      padding: 0;
+      position: relative;
+      background: #EC985A;
+      margin-bottom: 30px;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      font-size: 0;
+      line-height: 0;
+      b {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        font-size: 3rem;
+        background: white;
+      }
+      img {
+        object-fit: cover;
+        height: 460px;
+      }
+      &:nth-child(2n) {
+        img {
+          height: 560px;
+        }
+      }
+    } 
+  }
+}
+
+
+
+
+

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Markup Guide v1.0</title>
+
+  <!-- Common style -->
+  <link rel="stylesheet" href="/css/style.css" />
+  <!-- for Guide -->
+  <link rel="stylesheet" href="/css/pages/ui_guide.css" />
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- for Guide -->
+  <script src="/js/guide/guide.js"></script>
+</head>
+<body>
+
+  <div class="guide">
+  
+    <header class="guide-header">
+      <nav class="guide-nav">
+        <a href="/index.html">Home</a>
+        <ul class="guide-nav-menu">
+          <li>
+            <a href="#typo" class="nav-link active">Typo</a>
+          </li>
+          <li>
+            <a href="#spacer" class="nav-link">Spacer</a>
+          </li>
+          <li>
+            <a href="#grid" class="nav-link">Grid</a>
+          </li>
+          <li>
+            <a href="#button" class="nav-link">Button</a>
+          </li>
+          <li>
+            <a href="#badge" class="nav-link">Badge</a>
+          </li>
+          <li>
+            <a href="#tag" class="nav-link">Tag</a>
+          </li>
+          <li>
+            <a href="#form" class="nav-link">Form</a>
+          </li>
+          <li>
+            <a href="#tab" class="nav-link">Tab</a>
+          </li>
+          <li>
+            <a href="#thumb" class="nav-link">Thumb</a>
+          </li>
+          <li>
+            <a href="#list" class="nav-link">List</a>
+          </li>
+          <!-- <li>
+            <a href="#slide" class="nav-link">Slide</a>
+          </li>
+          <li>
+            <a href="#video" class="nav-link">Video</a>
+          </li>
+          <li>
+            <a href="#icon" class="nav-link">Icon</a>
+          </li>
+          <li>
+            <a href="#visual" class="nav-link">Visual</a>
+          </li>
+          <li>
+            <a href="#popup" class="nav-link">Popup</a>
+          </li>
+          <li>
+            <a href="#grid" class="nav-link">Grid</a>
+          </li> -->
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content guide-content">
+      <h1>UI Markup Guide v1.0</h1>
+
+      <section id="typo" class="guide-section">
+        <h2>Typo</h2>
+
+        <article class="guide-article">
+          <strong>h1</strong>
+          <h1>Lorem Ipsum Head Title Sample</h1>
+          <strong>h2</strong>
+          <h2>Lorem Ipsum Head Title Sample Long Text Information</h2>
+          <strong>h3</strong>
+          <h3>Lorem Ipsum Head Title Sample Long Text Information</h3>
+          <strong>h4</strong>
+          <h4>Lorem Ipsum Head Title Sample Long Text Information</h4>
+          <strong>h5</strong>
+          <h5>Lorem Ipsum Head Title Sample Long Text Information Two Rows Preview</h5>
+          <strong>h6</strong>
+          <h6>Lorem Ipsum Head Title Sample Long Text Information Two Rows Preview / RFS Responsive Font System</h6>
+        </article>
+
+      </section>
+
+      <section id="spacer" class="guide-section">
+        <h2>Spacer</h2>
+      </section>
+
+      <section id="grid" class="guide-section">
+        <h2>Grid <small>(12 column)</small></h2>
+
+        <article class="guide-article">
+          <strong>12 column</strong>
+          <!-- 12 Column -->
+          <div class="row sample">
+            <div class="col">.col</div>
+            <div class="col">.col</div>
+            <div class="col">.col</div>
+            <div class="col">.col</div>
+            <div class="col">.col</div>
+            <div class="col">.col</div>
+            <div class="col">.col</div>
+            <div class="col">.col</div>
+            <div class="col">.col</div>
+            <div class="col">.col</div>
+            <div class="col">.col</div>
+            <div class="col">.col</div>
+          </div>
+        </article>
+        <!-- Mixed Column -->
+        <article class="guide-article">
+          <strong>Mixed column (n/12)</strong>
+          <div class="row sample">
+            <div class="col col-2">.col.col-2</div>
+            <div class="col col-2">.col.col-2</div>
+            <div class="col col-5">.col.col-5</div>
+            <div class="col col-3">.col.col-3</div>
+          </div>
+          <div class="row sample">
+            <div class="col col-3">.col.col-3</div>
+            <div class="col col-7">.col.col-7</div>
+            <div class="col col-2">.col.col-2</div>
+          </div>
+        </article>
+        <!-- No Gutter -->
+        <article class="guide-article">
+          <strong>No gutter</strong>
+          <div class="row row-nogutter sample">
+            <div class="col">.col</div>
+            <div class="col">.col</div>
+            <div class="col">.col</div>
+          </div>
+        </article>
+        <!-- Fixed Column -->
+        <article class="guide-article">
+          <strong>Fixed column</strong>
+          <div class="row sample">
+            <div class="col col-fixed w168">.col.col-fixed</div>
+            <div class="col">.col</div>
+            <div class="col">.col</div>
+          </div>
+        </article>
+        <!-- Flex Glow -->
+        <article class="guide-article">
+          <strong>Flex glow (+ fixed)</strong>
+          <div class="row sample">
+            <div class="col col-grow-2">.col.col-grow-2</div>
+            <div class="col">.col</div>
+            <div class="col">.col</div>
+          </div>
+          <div class="row sample">
+            <div class="col col-grow-3">.col.col-grow-3</div>
+            <div class="col col-grow-2">.col.col-grow-2</div>
+            <div class="col">.col</div>
+          </div>
+          <div class="row sample">
+            <div class="col col-grow-3">.col.col-grow-3</div>
+            <div class="col">.col</div>
+          </div>
+          <div class="row sample">
+            <div class="col col-fixed w168">.col.col-fixed</div>
+            <div class="col col-grow-2">.col.col-grow-2</div>
+            <div class="col">.col</div>
+            <div class="col col-3">.col.col-3</div>
+          </div>
+        </article>
+        <!-- Content Alignment -->
+        <article class="guide-article">
+          <strong>Content alignment</strong>
+          <div class="row sample sample-align">
+            <div class="col col-top">.col.col-top</div>
+            <div class="col col-middle">.col.col-middle</div>
+            <div class="col col-bottom">.col.col-bottom</div>
+          </div>
+        </article>
+        <!-- Column Vertical Alignment -->
+        <article class="guide-article">
+          <strong>Column vertical alignment</strong>
+          <div class="row sample sample-valign">
+            <div class="col col-align-top">.col.col-align-top</div>
+            <div class="col col-align-middle">.col.col-align-middle</div>
+            <div class="col col-align-bottom">.col.col-align-bottom</div>
+          </div>
+        </article>
+        <!-- Grid Horizontal Align -->
+        <article class="guide-article">
+          <strong>Grid horizontal alignment</strong>
+          <div class="row row-start sample">
+            <div class="col col-6">.row-start &gt; .col.col-6</div>
+          </div>
+          <div class="row row-center sample">
+            <div class="col col-3">.row-start &gt; .col.col-3</div>
+            <div class="col col-3">.row-start &gt; .col.col-3</div>
+          </div>
+          <div class="row row-end sample">
+            <div class="col col-6">.row-end &gt; .col.col-6</div>
+          </div>
+        </article>
+        <!-- Column justify content -->
+        <article class="guide-article">
+          <strong>Column justify-content</strong>
+          <div class="row row-around sample">
+            <div class="col col-3">.row-around &gt; .col.col-3</div>
+            <div class="col col-3">.row-around &gt; .col.col-3</div>
+            <div class="col col-3">.row-around &gt; .col.col-3</div>
+          </div>
+          <div class="row row-between sample">
+            <div class="col col-3">.row-between &gt; .col.col-3</div>
+            <div class="col col-3">.row-between &gt; .col.col-3</div>
+            <div class="col col-3">.row-between &gt; .col.col-3</div>
+          </div>
+        </article>
+        <!-- Column order -->
+        <article class="guide-article">
+          <strong>Column order</strong>
+          <div class="row sample">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col col-first">.col.col-first</div>
+          </div>
+          <div class="row sample">
+            <div class="col col-last">.col.col-last</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+          </div>
+        </article>
+        <!-- Column reverse -->
+        <article class="guide-article">
+          <strong>Column reverse</strong>
+          <div class="row row-reverse sample">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+          </div>
+        </article>
+        <!-- Nesting -->
+        <article class="guide-article">
+          <strong>Nesting</strong>
+          <div class="row sample">
+            <div class="col">
+              .col
+              <div class="row">
+                <div class="col">Nested .col</div>
+                <div class="col">Nested .col</div>
+              </div>
+            </div>
+            <div class="col">.col</div>
+          </div>
+        </article>
+        <!-- Responsive -->
+        <article class="guide-article">
+          <strong>Responsive</strong>
+          <div class="row sample sample-bp">
+            <div class="col col-md">.col.col-md</div>
+            <div class="col col-md">.col.col-md</div>
+            <div class="col col-lg">.col.col-lg</div>
+          </div>
+          <div class="row sample sample-bp">
+            <div class="col col-sm">.col.col-sm</div>
+            <div class="col col-5 col-sm">.col.col-5.col-sm</div>
+            <div class="col col-lg">.col.col-lg</div>
+          </div>
+          <div class="row sample sample-bp">
+            <div class="col col-grow-2 col-md">.col.col-grow-2.col-md</div>
+            <div class="col col-md">.col.col-md</div>
+            <div class="col col-lg">.col.col-lg</div>
+          </div>
+        </article>
+        
+      </section>
+
+      <section id="button" class="guide-section">
+        <h2>Button</h2>
+      </section>
+
+      <section id="badge" class="guide-section">
+        <h2>Badge</h2>
+      </section>
+
+      <section id="tag" class="guide-section">
+        <h2>Tag</h2>
+      </section>
+
+      <section id="form" class="guide-section">
+        <h2>Form</h2>
+      </section>
+
+      <section id="tab" class="guide-section">
+        <h2>Tab</h2>
+      </section>
+      
+      <section id="thumb" class="guide-section">
+        <h2>Thumbnail</h2>
+      </section>
+
+      <section id="list" class="guide-section">
+        <h2>List</h2>
+      </section>
+    </main>
+    
+  </div>
+
+  <script>
+    // $(function () {
+    //   // scrollsply for UI-Guide
+    //   var sectionIds = $(".guide-nav-menu a.nav-link");
+    //   $(document).scroll(function () {
+    //     sectionIds.each(function () {
+    //       var container = $(this).attr("href");
+    //       var containerOffset = $(container).offset().top;
+    //       var containerHeight = $(container).outerHeight();
+    //       var containerBottom = containerOffset + containerHeight;
+    //       var scrollPosition = $(document).scrollTop();
+
+    //       if (scrollPosition < containerBottom - 20 && scrollPosition >= containerOffset - 20) {
+    //         $(this).addClass("active");
+    //       } else {
+    //         $(this).removeClass("active");
+    //       }
+    //     });
+    //   });
+    // });
+  </script>
+</body>
+</html>
+
+

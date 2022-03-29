@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{ title }}</title>
+
+    <!-- Favicon: Chrome, Safari, IE -->
+    <link rel="shortcut icon" href="favicon.ico"> 
+    <!-- FAvicon: Firefox, Opera (Chrome and Safari say thanks but no thanks) --> 
+    <link rel="icon" href="favicon.png">
+
+    <!-- 대표(표준) URL 설정 -->
+    <link rel="canonical" href="Canonical URL">
+
+    <!-- SEO -->
+    {% block seo %} {% endblock %}
+
+    <!-- Common style -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- This page style -->
+    <link rel="stylesheet" href="/css/{{ style }}" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Header: GNB -->
+    {% include "nav.html" %}
+		
+    <!-- Page markup include -->
+    {% block content %} {% endblock %}
+    <!-- END: Page markup include -->
+		
+		<!-- Footer -->
+    {% include "footer.html" %}
+
+    <script src="/js/common.js"></script>
+  </body>
+</html>

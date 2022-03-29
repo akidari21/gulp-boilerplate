@@ -1,0 +1,33 @@
+/*------------------*
+# Nav
+*------------------*/
+
+nav.gnb {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  height: 56px;
+  background: #333;
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 56px;
+  }
+  
+  li a {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    padding: 10px 20px;
+    color: $color-white;
+    background: $color-dark;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import "../base/variables";
+@import "../base/mixin";
+
+/*------------------*
+# Main Content
+*------------------*/
+
+.content {
+  align-items: center;
+  display: flex;
+  // height: 100vh;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.bg {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  // padding-top: calc(100% / 6 * 4);
+  background: url('/images/dog16.jpg') center/cover no-repeat;
+  // If support only Modern Browser 
+  // aspect-ratio: 16 / 9;
+  // aspect-ratio: 4 / 3;
+  // aspect-ratio: 7 / 6;
+  // aspect-ratio: 5 / 5;
+  // else If support mixin for IE (damm)
+  @include aspect-ratio(16, 9);
+  @include bp(sm) {
+    @include aspect-ratio(4, 3);
+  }
+  .inner-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    p {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      color: $color-white;
+    }
+    .t1 {
+      @include ellipsis(3);
+    }
+    .t2 {
+      @include ellipsis;
+    }
+  }
+}
+
+.list {
+  @extend %listreset;
+}
