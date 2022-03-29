@@ -1,0 +1,60 @@
+/*------------------*
+# Variables
+*------------------*/
+/* This file includes default variables to get going quickly on a project. File includes: - Base font family - Base font sizes - Heading spacing - Paragraph spacing - Base line height - Base colors */
+/* Font path */
+/* Base font family */
+/* Base font sizes */
+/* Heading spacing */
+/* Paragraph spacing */
+/* Base line height */
+/* Base colors */
+.guide-header .guide-nav-menu { margin: 0; padding: 0; list-style: none; }
+
+.guide-header { position: fixed; top: 0; z-index: 9; width: 100%; height: 50px; background: #333; }
+
+.guide-header .guide-nav { display: flex; height: 100%; }
+
+.guide-header .guide-nav > a { display: flex; align-items: center; padding: 0 20px; font-size: 14px; text-decoration: none; color: white; }
+
+.guide-header .guide-nav-menu { display: flex; flex-wrap: wrap; align-items: center; }
+
+.guide-header .guide-nav-menu li { height: 100%; }
+
+.guide-header .guide-nav-menu li a { display: flex; align-items: center; height: 100%; padding: 0 10px; font-size: 12px; font-weight: 500; text-decoration: none; color: white; }
+
+.guide-header .guide-nav-menu li a.active { background: #53c6f0; color: #000; }
+
+.guide-content { margin: 30px 0; padding: 20px; }
+
+.guide-content > h1 { font-size: calc(1.425rem + 2.1vw); letter-spacing: -0.1rem; }
+
+@media (min-width: 1200px) { .guide-content > h1 { font-size: 3rem; } }
+
+.guide-section { min-height: 800px; padding-top: 50px; }
+
+.guide-section > h2 { padding: 0 15px; border-bottom: 1px solid #ccc; font-size: calc(1.325rem + 0.9vw); line-height: .75; letter-spacing: -.1rem; }
+
+@media (min-width: 1200px) { .guide-section > h2 { font-size: 2rem; } }
+
+.guide-article { position: relative; margin: 15px; }
+
+.guide-article strong { line-height: 2.4rem; letter-spacing: -.05rem; color: #333; }
+
+.sample { margin-bottom: 15px; }
+
+.sample .col { position: relative; padding: 4px 8px; font-size: 12px; font-weight: 500; text-align: center; color: white; }
+
+.sample .col::after { z-index: -2; position: absolute; top: 0; left: 0; content: ""; background-color: #71a7c9; width: calc(100% - 16px); height: 100%; border-radius: 4px; margin: 0 8px; }
+
+.sample .col.w168 { width: 170px; }
+
+.sample-align .col { height: 96px; }
+
+.sample-valign { height: 112px; }
+
+.sample-bp .col { margin-bottom: 16px; }
+
+.sample.row-nogutter .col { padding: 4px 8px; }
+
+/*# sourceMappingURL=../sourcemap/pages/ui_guide.css.map */

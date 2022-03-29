@@ -1,0 +1,1 @@
+"use strict";console.log("Testing JS import file two.");

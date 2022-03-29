@@ -1,0 +1,36 @@
+/*------------------*
+# Variables
+*------------------*/
+/* This file includes default variables to get going quickly on a project. File includes: - Base font family - Base font sizes - Heading spacing - Paragraph spacing - Base line height - Base colors */
+/* Font path */
+/* Base font family */
+/* Base font sizes */
+/* Heading spacing */
+/* Paragraph spacing */
+/* Base line height */
+/* Base colors */
+.icon-container { display: inline-flex; justify-content: center; width: 48px; height: 48px; border: 2px solid; margin: 0 3px; border-radius: 50%; transition: background-color 150ms; }
+
+.icon-container--facebook { border-color: #3b5998; }
+
+.icon-container--facebook:hover { background-color: #3b5998; }
+
+.icon-container--twitter { border-color: #1da1f2; }
+
+.icon-container--twitter:hover { background-color: #1da1f2; }
+
+.icon-container--linkedin { border-color: #0077b5; }
+
+.icon-container--linkedin:hover { background-color: #0077b5; }
+
+.icon-container:hover .icon { max-width: 22px; fill: white; }
+
+.icon { max-width: 18px; transition: max-width 300ms, fill 150ms; }
+
+.icon--facebook { fill: #3b5998; }
+
+.icon--twitter { fill: #1da1f2; }
+
+.icon--linkedin { fill: #0077b5; }
+
+/*# sourceMappingURL=../sourcemap/pages/svg_ex.css.map */

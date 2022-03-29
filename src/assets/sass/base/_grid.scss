@@ -165,10 +165,14 @@ $base-unit: 8px;
 //Percent Based Columns
 @for $i from 1 through 12 {
   .col-#{$i} {
-    -ms-flex-preferred-size: math.div(100%, 12) * $i;
-    -webkit-flex-basis: math.div(100%, 12) * $i;
-    flex-basis: math.div(100%, 12) * $i;
-    max-width: math.div(100%, 12) * $i;
+    // -ms-flex-preferred-size: math.div(100%, 12) * $i;
+    // -webkit-flex-basis: math.div(100%, 12) * $i;
+    // flex-basis: math.div(100%, 12) * $i;
+    // max-width: math.div(100%, 12) * $i;
+    -ms-flex-preferred-size: (100% / 12) * $i;
+    -webkit-flex-basis: (100% / 12) * $i;
+    flex-basis: (100% / 12) * $i;
+    max-width: (100% / 12) * $i;
   }
 }
 

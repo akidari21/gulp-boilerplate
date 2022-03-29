@@ -5,13 +5,46 @@ const imagemin = require("gulp-imagemin");
 const htmlmin = require("gulp-htmlmin");
 const uglify = require("gulp-uglify");
 const sourcemaps = require("gulp-sourcemaps");
-const sass = require("gulp-sass")(require("sass"));
+// const sass = require("gulp-sass")(require("sass"));
+// 구버전 node-sass
+const sass = require("gulp-sass")(require("node-sass"));
 const concat = require("gulp-concat");
 const browserSync = require("browser-sync").create(); //https://browsersync.io/docs/gulp#page-top
 const nunjucksRender = require("gulp-nunjucks-render");
 const autoprefixer = require("gulp-autoprefixer");
 const babel = require("gulp-babel");
 const purgecss = require("gulp-purgecss");
+
+var sass_opt = {
+	/**
+	  * outputStyle (Type : String  , Default : nested)
+	  * CSS의 컴파일 결과 코드스타일 지정
+	  * Values : nested, expanded, compact, compressed
+	*/
+	outputStyle:"nested",
+	/**
+	  * indentType (>= v3.0.0 , Type : String , Default : space)
+	  * 컴파일 된 CSS의 "들여쓰기" 의 타입
+	  * Values : space , tab
+	*/
+	indentType:"space",
+	/**
+	  * indentWidth (>= v3.0.0, Type : Integer , Default : 2)
+	  * 컴파일 된 CSS의 "들여쓰기" 의 갯수
+	*/
+	indentWidth:2,
+	/**
+	 * precision (Type :  Integer , Default : 5)
+	 * 컴파일 된 CSS의 소수점 자리수.
+	*/
+	precision:5,
+	/**
+	 * sourceComments (Type : Boolean , Default : false)
+	 * 컴파일 된 CSS에 원본소스의 위치와 줄수 주석표시.
+	*/
+	sourceComments:false
+}
+
 
 // /*
 // TOP LEVEL FUNCTIONS
@@ -79,8 +112,12 @@ function css(cb) {
       "src/assets/sass/style.scss",
       "src/assets/sass/**/*.scss",
     ])
-    // .pipe(sourcemaps.init())
-    .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
+    .pipe(sourcemaps.init())
+    .pipe(sass({ 
+      outputStyle: 'compact',
+      // sourceComments: false
+    }).on("error", sass.logError))
+    // .pipe(sass(sass_opt).on("error", sass.logError))
     .pipe(purgecss({ content: ["src/**/*.html"] }))
     .pipe(
       autoprefixer({
@@ -93,7 +130,7 @@ function css(cb) {
         cascade: false,
       })
     )
-    // .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write("./sourcemap"))
     .pipe(gulp.dest("dist/css"))
     // Stream changes to all browsers
     .pipe(browserSync.stream());

@@ -1,0 +1,37 @@
+/*------------------*
+# Variables
+*------------------*/
+/* This file includes default variables to get going quickly on a project. File includes: - Base font family - Base font sizes - Heading spacing - Paragraph spacing - Base line height - Base colors */
+/* Font path */
+/* Base font family */
+/* Base font sizes */
+/* Heading spacing */
+/* Paragraph spacing */
+/* Base line height */
+/* Base colors */
+.list { margin: 0; padding: 0; list-style: none; }
+
+/*------------------*
+# Main Content
+*------------------*/
+.content { align-items: center; display: flex; justify-content: center; text-align: center; width: 100%; }
+
+.bg { position: relative; overflow: hidden; margin: 0 auto; background: url("/images/dog16.jpg") center/cover no-repeat; position: relative; }
+
+.bg > * { position: absolute; top: 0; right: 0; bottom: 0; left: 0; box-sizing: border-box; }
+
+.bg::before { position: relative; content: ''; display: block; padding-top: calc(9 / 16 * 100%); }
+
+@media (max-width: 576px) { .bg { position: relative; }
+  .bg > * { position: absolute; top: 0; right: 0; bottom: 0; left: 0; box-sizing: border-box; }
+  .bg::before { position: relative; content: ''; display: block; padding-top: calc(3 / 4 * 100%); } }
+
+.bg .inner-text { position: absolute; top: 0; left: 0; width: 100%; height: 100%; padding: 20px; }
+
+.bg .inner-text p { width: 80%; margin: 0 auto; text-align: center; color: #ffffff; }
+
+.bg .inner-text .t1 { display: -webkit-box; -webkit-line-clamp: 3; /* autoprefixer: off */ -webkit-box-orient: vertical; /* autoprefixer: on */ overflow: hidden; }
+
+.bg .inner-text .t2 { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; }
+
+/*# sourceMappingURL=../sourcemap/pages/main.css.map */

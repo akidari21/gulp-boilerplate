@@ -1,0 +1,33 @@
+/*------------------*
+# Variables
+*------------------*/
+/* This file includes default variables to get going quickly on a project. File includes: - Base font family - Base font sizes - Heading spacing - Paragraph spacing - Base line height - Base colors */
+/* Font path */
+/* Base font family */
+/* Base font sizes */
+/* Heading spacing */
+/* Paragraph spacing */
+/* Base line height */
+/* Base colors */
+/*------------------*
+# Depth-1 Content
+*------------------*/
+ul { list-style: none; margin: 0; padding: 0; }
+
+.list-wrap { margin: 0 auto; }
+
+.list-wrap .list-3col { -moz-columns: 3; columns: 3; -moz-column-gap: 30px; column-gap: 30px; }
+
+@media (max-width: 768px) { .list-wrap .list-3col { -moz-columns: 2; columns: 2; } }
+
+@media (max-width: 576px) { .list-wrap .list-3col { -moz-columns: 1; columns: 1; } }
+
+.list-wrap .list-3col li { padding: 0; position: relative; background: #EC985A; margin-bottom: 30px; display: inline-block; width: 100%; text-align: center; font-size: 0; line-height: 0; }
+
+.list-wrap .list-3col li b { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; width: 80px; height: 80px; border-radius: 50%; font-size: 3rem; background: white; }
+
+.list-wrap .list-3col li img { -o-object-fit: cover; object-fit: cover; height: 460px; }
+
+.list-wrap .list-3col li:nth-child(2n) img { height: 560px; }
+
+/*# sourceMappingURL=../sourcemap/pages/gallery.css.map */
